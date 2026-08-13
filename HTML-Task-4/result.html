@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Application Submitted</h1>
+
+    <div id="results">
+        <p>Dear <strong id="firstName"></strong> <strong id="lastName"> </strong> Your Application Has Been Submitted</p>
+        
+    </div>
+</body>
+<script>
+    const resultList = document.getElementById('results')
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('firstName').textContent = params.get('firstName');
+    document.getElementById('lastName').textContent = params.get('lastName');
+</script>
+</html>

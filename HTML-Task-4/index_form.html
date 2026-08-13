@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-form {
+            width: 25%;
+            text-align: center;
+            display: block;
+        }
+
+        * {
+            box-sizing: border-box;
+            width: fit-content;
+        }
+
+        .outer-form {
+            align-items: center;
+            border: 1px solid black;
+            height: auto;
+        }
+
+        input,
+        button {
+            margin-left: 6px;
+        }
+
+        .save-Button {
+            margin: 6px;
+        }
+
+        .personalField {
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer-form">
+        <form action="./result.html" method="GET" class="main-form">
+            <section>
+                <h2 style="width: max-content; margin-left: 18px;">Scholarship Form</h2>
+            </section>
+            <section>
+                <fieldset style="width: max-content;">
+                    <legend>Personal Details</legend>
+                    <div>
+                        <label for="firstName">First Name</label>
+                        <input placeholder="Enter Your First Name" id="firstName" name="firstName" type="text"
+                            minlength="3" maxlength="15" required />
+                    </div>
+                    <br />
+                    <div>
+                        <label for="middelName">Middle Name</label>
+                        <input name="middelName" id="middelName" type="text" minlength="3" maxlength="15" required />
+                    </div>
+                    <br />
+                    <div>
+                        <label for="lastName">Last Name</label>
+                        <input name="lastName" type="text" id="lastName" minlength="3" maxlength="15" required />
+                    </div>
+                    <br />
+                    <div>
+                        <label for="mobile">Mobile No</label>
+                        <input name="mobile" type="number" id="mobile" required />
+                        <button type="button" onclick="alert('otp sent on mobile')">Get OTP</button>
+                    </div>
+                    <br />
+                    <div>
+                        <label id="email">Email</label>
+                        <input name="email" type="email" id="email" />
+                        <button type="button" onclick="alert('otp sent on email')">Get OTP</button>
+                    </div>
+                    <br />
+                    <div>
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" rows="4" maxlength="200"
+                            placeholder="Max lenght 200" required></textarea>
+                    </div>
+                    <br />
+                    <div>
+                        <label for="country">Country</label>
+                        <input placeholder="Choose your hobby" type="text" id="country" name="country"
+                            list="countries" />
+                        <datalist id="countries">
+                            <option value="india">india</option>
+                            <option value="china">china</option>
+                            <option value="usa">usa</option>
+                            <option value="russia">russia</option>
+                            <option value="portugal">portugal</option>
+                        </datalist>
+                    </div>
+                    <br />
+                    <div>
+                        <label for="male">Male</label>
+                        <input id="male" name="gender" type="radio" value="Male" required/>
+                        <label>Female</label>
+                        <input type="radio" id="female" name="gender" value="Female" />
+                    </div>
+                    <br />
+                    <div>
+                        <label for="dateTime">BirthDate : </label>
+                        <input min="2006-07-01" name="dateTime" id="dateTime" type="date" required/>
+                    </div>
+                    <br />
+                    <div>
+                        <label for="hobby">Hobby:</label>
+                        <select id="hobby" name="hobby" required>
+                            <option value="" selected disabled>Choose your Hobby</option>
+                            <option value="cricket">Cricket</option>
+                            <option value="football">Football</option>
+                            <option value="reading">Reading</option>
+                            <option value="music">Music</option>
+                        </select>
+                    </div>
+                    <br />
+                    <fieldset>
+                        <legend>Select Your Interests:</legend>
+                        <br />
+                        <label>
+                            <input type="checkbox" name="interests" value="sports"
+                            
+                            />
+                            Sports
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="interests" value="music" />
+                            Music
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="interests" value="reading" />
+                            Reading
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="interests" value="coding" />
+                            Coding
+                        </label>
+                    </fieldset>
+                    <br />
+                    <div>
+                        <label>Father Salary :</label>
+                        <input max="1000000" min="100000" step="10000" type="range"
+                            oninput="this.nextElementSibling.value=this.value"/>
+                        <output>500000</output>
+                    </div>
+                    <br />
+                    <div>
+                        <label>Upload Photo : </label>
+                        <input type="file" name="photo" id="photo" required />
+                    </div>
+                    <br />
+                    <div>
+                        <label>Upload AdharCard : </label>
+                        <input type="file" name="addharCard" id="addharCard" required/>
+                    </div>
+                    <br />
+                    <div>
+                        <button onclick="alert('your detail saved')" class="save-Button" type="button">Save</button>
+                        <button onclick="alert('No Way To Go Back You Need To Change Manually')"="save-Button"
+                            type="reset">Reset</button>
+                    </div>
+                </fieldset>
+            </section>
+            <section>
+                <fieldset style="width: max-content;">
+                    <legend>Education Detail</legend>
+                    <div>
+                        <label for="school">School Name </label>
+                        <input name="school" id="school" type="text" minlength="5" maxlength="50" required/>
+                    </div>
+                    <br />
+                    <div>
+                        <label for="collage">Collage Name </label>
+                        <input id="collage" name="collage" type="text" minlength="5" maxlength="50" required  />
+                    </div>
+                    <br />
+                    <div>
+                        <label for="cgpa">CGPA</label>
+                        <input name="cgpa" id="cgpa" type="number" min="0" max="10" required/>
+                    </div>
+                    <br />
+                    <div>
+                        <label for="sem">Semester</label>
+                        <input name="sem" id="sem" type="number" max="8" min="4" required/>
+                    </div>
+                    <br />
+                    <div>
+                        <label for="resume">Upload Resume:</label>
+                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required/>
+                    </div>
+                    <br />
+                    <div>
+                        <button onclick="alert('your detail saved')" class="save-Button" type="button">Save</button>
+                        <button onclick="alert('No Way To Go Back You Need To Change Manually')" class="save-Button"
+                            type="button">Reset</button>
+                    </div>
+
+                </fieldset>
+            </section>
+            <section>
+                <button type="submit" style="margin: 12px 4px;">Submit</button>
+            </section>
+        </form>
+    </div>
+</body>
+
+</html>
