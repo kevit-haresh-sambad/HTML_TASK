@@ -13,7 +13,7 @@
         }
 
         .allTopic {
-            display: flex;
+            display: inline-flex;
             justify-content: space-between;
             align-items: center;
             width: 50%;
@@ -21,12 +21,13 @@
             border-radius: 1rem;
             margin: 6px;
             padding-inline: 12px;
+
         }
 
         .searchBar {
             margin: 12px;
             display: flex;
-            border: 1px solid black;
+            /* border: 1px solid black; */
             border-radius: 1rem;
             text-align: center;
             align-items: center;
@@ -76,8 +77,8 @@
         footer {
             border: 1px solid black;
         }
-        .advertisment
-        {
+
+        .advertisment {
             text-align: center;
         }
     </style>
@@ -85,126 +86,160 @@
 
 <body>
     <header class="mainHeader">
-        <figure>
-            <img alt="MDN logo" width="60" height="28"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRJpxoaHL84SRifJOYenMGjAdGvJzv3hthhxLi5Obknw&s=10" />
-        </figure>
-        <div class="allTopic">
-            <section>
-                <p><a target="_blank" href="">HTML</a></p>
-            </section>
-            <section>
-                <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></p>
-            </section>
-            <section>
-                <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JS</a></p>
-            </section>
-            <section>
-                <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API">Web APIs</a></p>
-            </section>
-            <section>
-                <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web">All</a></p>
-            </section>
-            <section>
-                <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn_web_development">Learn</a>
-                </p>
-            </section>
+        <div>
+            <a href="/" class="logo">
+                <img alt="MDN logo" width="60" height="28" alt="HTML semantic layout diagram"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRJpxoaHL84SRifJOYenMGjAdGvJzv3hthhxLi5Obknw&s=10" />
+            </a>
         </div>
+        <nav class="allTopic">
+            <ul class="allTopic">
+                <li>
+                    <a target="_blank" href="">HTML</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JS</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API">Web APIs</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web">All</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn_web_development">Learn</a>
+
+                </li>
+            </ul>
+        </nav>
 
         <div class="searchBar">
-            <section>
-                Search Bar
-            </section>
+            <input type="search" />
+            <button type="submit">Search</button>
         </div>
     </header>
     <div class="layout">
-        <nav class="leftContent">
-            <section>
-                <h4>HTML</h4>
-                <p><a target="_blank" href="https://developer.mozilla.org/en-US/">- Guides</a></p>
-            </section>
-            <section>
-                <h4>How To</h4>
-                <p><a target="_blank"
-                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Define_terms_with_HTML">Define
-                        terms with HTML</a></p>
-                <p><a target="_blank"
-                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes">Use data
-                        attributes</a></p>
-                <p><a target="_blank"
-                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/CORS_enabled_image">Use
-                        cross-origin images</a></p>
-                <p><a target="_blank"
-                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image">Add
-                        aa hitmap on top an image</a></p>
-                <p><a target="_blank"
-                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages">Author
-                        fast-loading HTML pages</a></p>
-                <p><a target="_blank"
-                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page">Add
-                        JavaScript</a></p>
-            </section>
-            <section>
-                <h4>Reference</h4>
-                <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements"
-                        target="_blank">Elements</a></p>
-                <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes"
-                        target="_blank">Attributes</a></p>
-                <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes"
-                        target="_blank">Global attributes</a></p>
-                <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/button"
-                        target="_blank">Attributes by elements</a></p>
-                <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet"
-                        target="_blank">Attributes values</a></p>
-            </section>
-        </nav>
+        <aside class="leftContent">
+            <h2>HTML</h2>
+            <nav>
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://developer.mozilla.org/en-US/">- Guides</a>
+                    </li>
+                </ul>
+
+
+                <section>
+                    <h3>How To</h3>
+                    <ul>
+                        <li>
+                            <a target="_blank"
+                                href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Define_terms_with_HTML">Define
+                                terms with HTML</a>
+                        </li>
+
+                        <li>
+                            <a target="_blank"
+                                href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes">Use
+                                data
+                                attributes</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/CORS_enabled_image">Use
+                                cross-origin images</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image">Add
+                                aa hitmap on top an image</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages">Author
+                                fast-loading HTML pages</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page">Add
+                                JavaScript</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Reference</h3>
+                    <ul>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements"
+                                target="_blank">Elements</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes"
+                                target="_blank">Attributes</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes"
+                                target="_blank">Global attributes</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/button"
+                                target="_blank">Attributes by elements</a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet"
+                                target="_blank">Attributes values</a>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+        </aside>
         <main>
             <article>
-                <header>
-                    <h1>HTML: HyperText Markup Language</h1>
-                </header>
-                <section>
-                    <p><strong>HTML (HyperText Markup Language)</strong> is the most basic building block of the Web. It
-                        defines
-                        the meaning and
-                        structure of web content. Other technologies besides HTML are generally used to describe a web
-                        page's
-                        appearance/presentation <a target="_blank"
-                            href="https://developer.mozilla.org/en-US/docs/Web/CSS">(CSS)</a> or functionality/behavior
-                        <a target="_blank"
-                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">(JavaScript)</a>.
-                    </p>
-                    <p>
-                        "Hypertext" refers to links that connect web pages to one another, either within a single
-                        website or
-                        between websites. Links are a fundamental aspect of the Web. By uploading content to the
-                        Internet
-                        and
-                        linking it to pages created by other people, you become an active participant in the World Wide
-                        Web.
-                    </p>
-                    <p>
-                        HTML uses "markup" to annotate text, images, and other content for display in a Web browser.
-                        HTML markup includes special "elements" such as head, title, body, header, footer, article,
-                        section, p, div, span, img, aside, audio, canvas, datalist, details, embed, nav, search, output,
-                        progress, video, ul, ol, li and many others.
-                    </p>
-                    <p>
-                        An HTML element is set off from other text in a document by "tags", which consist of the element
-                        name surrounded by the less-than and greater-than signs. The name of an element inside a tag is
-                        case-insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example,
-                        the title tag can be written as Title, TITLE, or in any other way. However, the convention and
-                        recommended practice is to write tags in lowercase.
-                    </p>
-                    <p>
-                        The articles below can help you learn more about HTML.
-                    </p>
-                </section>
+                <h1>HTML: HyperText Markup Language</h1>
+                <p><strong>HTML (HyperText Markup Language)</strong> is the most basic building block of the Web. It
+                    defines
+                    the meaning and
+                    structure of web content. Other technologies besides HTML are generally used to describe a web
+                    page's
+                    appearance/presentation <a target="_blank"
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS">(CSS)</a> or functionality/behavior
+                    <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">(JavaScript)</a>.
+                </p>
+                <p>
+                    "Hypertext" refers to links that connect web pages to one another, either within a single
+                    website or
+                    between websites. Links are a fundamental aspect of the Web. By uploading content to the
+                    Internet
+                    and
+                    linking it to pages created by other people, you become an active participant in the World Wide
+                    Web.
+                </p>
+                <p>
+                    HTML uses "markup" to annotate text, images, and other content for display in a Web browser.
+                    HTML markup includes special "elements" such as head, title, body, header, footer, article,
+                    section, p, div, span, img, aside, audio, canvas, datalist, details, embed, nav, search, output,
+                    progress, video, ul, ol, li and many others.
+                </p>
+                <p>
+                    An HTML element is set off from other text in a document by "tags", which consist of the element
+                    name surrounded by the less-than and greater-than signs. The name of an element inside a tag is
+                    case-insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example,
+                    the title tag can be written as Title, TITLE, or in any other way. However, the convention and
+                    recommended practice is to write tags in lowercase.
+                </p>
+                <p>
+                    The articles below can help you learn more about HTML.
+                </p>
                 <section>
                     <h2>Beginner's tutorials</h2>
                     <p>Our
                         <a target="_blank"
-                            href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core">learn web
+                            href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core">learn
+                            web
                             development core modules contain modern</a> up-to-date tutorials covering HTML
                         fundamentals.
                     </p>
@@ -222,15 +257,13 @@
         </main>
         <aside class="rightContent">
             <section class="advertisment">
-                <h5>Advertisment</h5>
-                <figure>
-                    <img height="auto" width="auto "
-                        src="https://media.geeksforgeeks.org/wp-content/uploads/20241127115416984900/html-sementics-layout.png" />
-                </figure>
+                <h2>Advertisement</h2>
+                <img height="auto" width="auto" alt="HTML semantic layout diagram"
+                    src="https://media.geeksforgeeks.org/wp-content/uploads/20241127115416984900/html-sementics-layout.png" />
             </section>
-            <section style="text-align: center;">
-                <h4><a target="_blank" href="https://github.com/hareshsambad">Do Not Click Here ⚠️</a></h4>
-            </section>
+            <div style="text-align: center;">
+                <a target="_blank" href="https://github.com/hareshsambad">Do Not Click Here ⚠️</a>
+            </div>
         </aside>
     </div>
     <footer>
@@ -242,12 +275,10 @@
             </section>
             <section>
                 <h4>Location</h4>
-                <p>Level 6 , Near 150ft Road - Rajkot</p>
+                <address>Level 6 , Near 150ft Road - Rajkot</address>
             </section>
         </div>
-        <section style="text-align: center;">
-            <p>@Kevit.io</p>
-        </section>
+        <p style="text-align: center;">@Kevit.io</p>
     </footer>
 </body>
 
